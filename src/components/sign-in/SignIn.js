@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styles from './SignIn.module.scss';
 import FormInput from '../form-input/FormInput';
 import CustomButton from '../UI/CustomButton/CustomButton';
-import { signInWithGoogle } from './../../firebaseConfig/firebase.utils';
+import { signInWithGoogle } from '../../../../firebaseConfig/firebase.utils';
 class SignIn extends Component {
   constructor(props) {
     super(props);
