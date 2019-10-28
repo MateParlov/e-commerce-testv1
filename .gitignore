@@ -8,6 +8,7 @@
 # testing
 /coverage
 #firebase
+/firebase
 firebase.utils.js
 # production
 /build
