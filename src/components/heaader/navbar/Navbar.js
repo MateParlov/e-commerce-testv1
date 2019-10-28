@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
+import { auth } from './../../../firebase/firebase.utils';
 const Navbar = props => {
+  const handleSignOut = () => {
+    auth.signOut();
+  };
+
   return (
     <div className={styles.Navbar}>
       <Link className={styles.option} to="/shop">
@@ -10,9 +15,15 @@ const Navbar = props => {
       <Link className={styles.option} to="/shop">
         CONTACT
       </Link>
-      <Link className={styles.option} to="/shop">
-        SIGN IN
-      </Link>
+      {props.currentUser ? (
+        <Link className={styles.option} onClick={handleSignOut}>
+          SIGN OUT
+        </Link>
+      ) : (
+        <Link to="/signin" className={styles.option}>
+          SIGN IN
+        </Link>
+      )}
     </div>
   );
 };

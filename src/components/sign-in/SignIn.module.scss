@@ -1,0 +1,16 @@
+.SignIn {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin-bottom: 15px;
+  }
+  .subtitle {
+    color: gray;
+  }
+
+  .buttonBox {
+    display: flex;
+    justify-content: space-between;
+  }
+}

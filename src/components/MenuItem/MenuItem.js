@@ -11,7 +11,7 @@ const MenuItem = props => {
   // Output: "maybeClass otherClass"
 
   <li className={myClassNames} />; */
-  console.log(props);
+
   return (
     <div
       className={styles.menuItem + ' ' + styles[size]}

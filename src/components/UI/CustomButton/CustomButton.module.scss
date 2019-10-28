@@ -1,0 +1,23 @@
+.CustomButton {
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  border: 2px solid white;
+  outline: none;
+  &:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
+}
+.googleSignIn {
+  background: rgb(90, 90, 241);
+  color: white;
+
+  &:hover {
+    background: rgb(90, 90, 241);
+    color: black;
+  }
+}
