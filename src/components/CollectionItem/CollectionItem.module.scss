@@ -1,0 +1,20 @@
+.CollectionItem {
+  width: 22%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    height: 95%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .CollectionFooter {
+    padding: 5px;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
