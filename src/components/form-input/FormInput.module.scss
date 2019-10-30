@@ -19,8 +19,9 @@ $main-color: black;
     outline: none;
     width: 100%;
     padding: 4px;
+    background: transparent;
     &:focus {
-      background: rgb(211, 244, 255);
+      background: rgba(164, 226, 241, 0.2);
     }
     &:focus ~ .formInputLabel {
       @include shrinkLabel();
@@ -31,7 +32,7 @@ $main-color: black;
     color: $sub-color;
     top: 5px;
     left: 10px;
-
+    z-index: -1;
     transition: 300ms ease all;
   }
 
