@@ -1,0 +1,10 @@
+.Checkout {
+  display: flex;
+  justify-content: space-around;
+  .checkoutItemsBox {
+    width: 600px;
+
+    max-height: 80vh;
+    overflow: auto;
+  }
+}

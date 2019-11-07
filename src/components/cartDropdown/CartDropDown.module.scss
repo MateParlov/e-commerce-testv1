@@ -1,0 +1,23 @@
+.CartDropDown {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  padding: 5px;
+  text-align: center;
+  width: 250px;
+
+  .cartItems {
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  button {
+    margin: 0 auto;
+  }
+}

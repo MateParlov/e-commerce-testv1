@@ -10,9 +10,7 @@ const PreviewCollection = props => {
       <h1 className={styles.title}>{title.toUpperCase()}</h1>
       <div className={styles.preview}>
         {items
-          .map(({ id, ...itemProps }) => (
-            <CollectionItem id={id} {...itemProps} />
-          ))
+          .map(item => <CollectionItem id={item.id} item={item} />)
           .splice(0, 4)}
       </div>
     </div>

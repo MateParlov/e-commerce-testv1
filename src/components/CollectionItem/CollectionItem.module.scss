@@ -3,6 +3,9 @@
   height: 350px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
   .image {
     height: 95%;
@@ -16,5 +19,21 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
+  &:hover {
+    opacity: 0.9;
+  }
+  &:hover .customButton {
+    display: block;
+  }
+}
+
+.customButton {
+  position: absolute;
+  top: 245px;
+  opacity: 0.7;
+  font-size: 1.1em;
+  height: 50px;
+  display: none;
 }

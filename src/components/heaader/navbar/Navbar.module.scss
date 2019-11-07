@@ -1,5 +1,10 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+}
 .option {
   margin: 0 10px;
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }

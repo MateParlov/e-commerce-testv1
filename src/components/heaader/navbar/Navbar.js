@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 import { auth } from './../../../firebaseConfig/firebase.utils';
+import CartIcon from '../../cartIcon/CartIcon';
+
 const Navbar = props => {
   const handleSignOut = () => {
     auth.signOut();
@@ -24,6 +26,7 @@ const Navbar = props => {
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
   );
 };
