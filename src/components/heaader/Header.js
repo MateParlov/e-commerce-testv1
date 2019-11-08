@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { selectCurrentUser } from './../../redux/user/user.selectors';
 const Header = props => {
   const { currentUser } = props;
-  console.log(currentUser);
+
   return (
     <div className={styles.Header}>
       <HeaderLogo />

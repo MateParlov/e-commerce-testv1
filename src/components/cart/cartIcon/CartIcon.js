@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { ReactComponent as ShoppingIcon } from './../../assets/shoppingBag.svg';
+import { ReactComponent as ShoppingIcon } from './../../../assets/shoppingBag.svg';
 
 import styles from './CartIcon.module.scss';
 import CartDropDown from '../cartDropdown/CartDropDown';
 
 import { connect } from 'react-redux';
-import { switchHiddenState } from './../../redux/cart/cart.actions';
+import { switchHiddenState } from '../../../redux/cart/cart.actions';
 import {
   cartShow,
   selectCartItemsCount
-} from './../../redux/cart/cart.selectors';
+} from '../../../redux/cart/cart.selectors';
 const CartIcon = props => {
   const { cartItemsCount, cartHidden } = props;
   const showDropDown = cartHidden ? null : <CartDropDown />;

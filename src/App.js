@@ -41,13 +41,13 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.currentUser);
     return (
       <div className="App">
         <Header />
         <Switch>
           <Route exact path="/" render={() => <Homepage />} />
-          <Route path="/shop" component={ShopPage} />
+          <Route path="/shop/" component={ShopPage} />
+          <Route path="/shop/:category" component={ShopPage} />
           <Route
             path="/signin"
             render={() =>

@@ -3,14 +3,6 @@ import styles from './MenuItem.module.scss';
 import { withRouter } from 'react-router-dom';
 const MenuItem = props => {
   const { title, imageUrl, size, match, linkUrl } = props;
-  /*  const styles = {
-    menuItem: true
-  };
-
-  const myClassNames = classNames(classes);
-  // Output: "maybeClass otherClass"
-
-  <li className={myClassNames} />; */
 
   return (
     <div

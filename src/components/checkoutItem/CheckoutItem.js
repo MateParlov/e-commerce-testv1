@@ -27,7 +27,7 @@ const CheckoutItem = props => {
   return (
     <div className={styles.CheckoutItem}>
       <div className={styles.imgBox}>
-        <img src={imageUrl} />
+        <img src={imageUrl} alt={name} />
       </div>
       <div className={styles.detailsBox}>
         <span>{name}</span>
@@ -40,12 +40,14 @@ const CheckoutItem = props => {
             src={leftArrow}
             onClick={handleRemoveItem}
             className={styles.arrow}
+            alt="remove item"
           />{' '}
           {quantity}
           <img
             src={rightArrow}
             onClick={handleAddItem}
             className={styles.arrow}
+            alt="add item "
           />
         </div>
         <CustomButton

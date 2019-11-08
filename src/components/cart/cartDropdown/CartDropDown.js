@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './CartDropDown.module.scss';
-import CustomButton from '../UI/CustomButton/CustomButton';
+import CustomButton from '../../UI/CustomButton/CustomButton';
 import CartItem from '../cartItem/CartItem';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { switchHiddenState } from './../../redux/cart/cart.actions';
-import { selectCartItems } from './../../redux/cart/cart.selectors';
+import { switchHiddenState } from './../../../redux/cart/cart.actions';
+import { selectCartItems } from './../../../redux/cart/cart.selectors';
 const CartDropDown = props => {
   const { cartItems } = props;
 
