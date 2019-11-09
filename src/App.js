@@ -21,7 +21,7 @@ let s3 = new aws.S3({
   secretAccessKey: process.env.S3_SECRET
 });
 
-console.log(s3);
+console.log(s3.accessKeyId);
 class App extends Component {
   unsubscribeFromAuth = null;
 
