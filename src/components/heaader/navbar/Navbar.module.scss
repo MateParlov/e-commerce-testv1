@@ -1,10 +1,24 @@
 .Navbar {
   display: flex;
   align-items: center;
-}
-.option {
-  margin: 0 10px;
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
+  position: relative;
+  .option {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      &:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        width: 80px;
+        height: 2px;
+        border-top: 2px solid rgb(221, 215, 215);
+      }
+    }
+  }
 }
