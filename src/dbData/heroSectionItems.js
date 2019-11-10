@@ -4,27 +4,27 @@ const DISPLAY_ITEMS = [
     title: 'A new level of comfort',
     description:
       'Introducing the Adiddas Phantom Vision. Specialy design to offer maximum comfort.',
-    imageUrl: 'https://imgur.com/a/K4GZrjZ',
+    imageUrl: 'https://i.imgur.com/zEFJrf0.png',
 
     name: 'Addidas Phantom Vision'
   },
   {
     id: 2,
-    title: 'A new level of comfort',
+    title: 'Never seen before, just great preformance',
     description:
       'Introducing the Adiddas Phantom Vision. Specialy design to offer maximum comfort.',
-    imageUrl: 'https://imgur.com/a/K4GZrjZ',
+    imageUrl: 'https://i.imgur.com/8wRibov.png',
 
-    name: 'Addidas Phantom Vision'
+    name: 'Nike Phantom Vision'
   },
   {
     id: 3,
-    title: 'A new level of comfort',
+    title: 'Like walking on sofest cloud ',
     description:
       'Introducing the Adiddas Phantom Vision. Specialy design to offer maximum comfort.',
-    imageUrl: 'https://imgur.com/a/K4GZrjZ',
+    imageUrl: 'https://i.imgur.com/MFzxB5o.png',
 
-    name: 'Addidas Phantom Vision'
+    name: 'Umbro Phantom Vision'
   }
 ];
 export default DISPLAY_ITEMS;

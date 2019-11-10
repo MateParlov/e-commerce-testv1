@@ -1,15 +1,18 @@
 import React from 'react';
-
 import styles from './CheckoutItem.module.scss';
+import PropTypes from 'prop-types';
+//icon and components imports
+import CustomButton from '../../components/UI/CustomButton/CustomButton';
 import leftArrow from './../../assets/arrowIcons/left-arrow.png';
 import rightArrow from './../../assets/arrowIcons/right-arrow.png';
+//redux imports
 import { connect } from 'react-redux';
 import {
   deleteItem,
   removeItem,
   addItem
 } from './../../redux/cart/cart.actions';
-import CustomButton from '../../components/UI/CustomButton/CustomButton';
+
 const CheckoutItem = props => {
   const { quantity, imageUrl, name, price, id } = props.item;
 
@@ -67,6 +70,13 @@ const CheckoutItem = props => {
       </div>
     </div>
   );
+};
+
+CheckoutItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  deleteItem: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
+  removeItem: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => {

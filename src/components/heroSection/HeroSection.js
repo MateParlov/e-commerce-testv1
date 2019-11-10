@@ -1,42 +1,60 @@
-import React, { Component } from 'react';
-import DISPLAY_ITEMS from './../../dbData/heroSectionItems';
+import React from 'react';
 import styles from './HeroSection.module.scss';
-import CustomButton from '../UI/CustomButton/CustomButton';
+import PropTypes from 'prop-types';
+//components and icons imports
+import HeroProductDisplay from './heroProductDisplay/HeroProductDisplay';
+import leftArrow from './../../assets/heroSectionIcons/leftIcon.png';
+import rightArrow from './../../assets/heroSectionIcons/rightIcon.png';
+//REDUX
+import { connect } from 'react-redux';
+import { changeItem } from './../../redux/showcaseItems/showcaseItems.actions';
+import {
+  selectItems,
+  selectCurrentIndex
+} from './../../redux/showcaseItems/showcaseItems.selectors';
 
-class HeroSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: DISPLAY_ITEMS
-    };
-  }
+const HeroSection = props => {
+  const { items, currentIndex, changeItem } = props;
+  const handleNextItem = () => {
+    changeItem(currentIndex + 1);
+  };
+  const handlePrevItem = () => {
+    changeItem(currentIndex - 1);
+  };
 
-  render() {
-    return (
-      <div className={styles.HeroSection}>
-        <div className={styles.contentSection}>
-          <div>
-            <h1 className={styles.title}>{this.state.items[0].title}</h1>
-            <p className={styles.description}>
-              {this.state.items[0].description}
-            </p>
-          </div>
-          <div className={styles.callToActionButtons}>
-            <CustomButton>SHOP NOW</CustomButton>
-            <CustomButton>SHOP ALL</CustomButton>
-          </div>
-        </div>
-        <div className={styles.imageSection}>
-          <div
-            style={{
-              backgroundImage: `url('https://i.imgur.com/aPtZmbW.png')`
-            }}
-            className={styles.heroImage}
-          ></div>
-        </div>
+  return (
+    <div className={styles.HeroSection}>
+      <div onClick={handlePrevItem} className={styles.leftArrow}>
+        <img src={leftArrow} alt="previous item" />
       </div>
-    );
-  }
-}
 
-export default HeroSection;
+      <HeroProductDisplay item={items[currentIndex]} />
+
+      <div onClick={handleNextItem} className={styles.rightArrow}>
+        <img src={rightArrow} alt="next item" />
+      </div>
+    </div>
+  );
+};
+
+HeroSection.propTypes = {
+  items: PropTypes.array.isRequired,
+  currentIndex: PropTypes.number.isRequired,
+  changeItem: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => {
+  return {
+    items: selectItems(state),
+    currentIndex: selectCurrentIndex(state)
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    changeItem: num => dispatch(changeItem(num))
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HeroSection);

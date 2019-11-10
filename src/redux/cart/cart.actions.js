@@ -1,6 +1,6 @@
 import actionTypes from './cart.types';
 
-const switchHiddenState = cart => ({
+const switchHiddenState = () => ({
   type: actionTypes.SWITCH_HIDDEN_STATE
 });
 

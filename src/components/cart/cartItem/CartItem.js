@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './CartItem.module.scss';
+import PropTypes from 'prop-types';
 const CartItem = props => {
   const { imageUrl, price, name, quantity } = props.item;
 
@@ -14,6 +15,10 @@ const CartItem = props => {
       </div>
     </div>
   );
+};
+
+CartItem.propTypes = {
+  item: PropTypes.object.isRequired
 };
 
 export default CartItem;

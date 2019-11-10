@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import styles from './SignUp.module.scss';
 import { withRouter } from 'react-router-dom';
+//components imports
+import FormInput from '../UI/form-input/FormInput';
+import CustomButton from '../UI/CustomButton/CustomButton';
+//firebase imports
 import {
   auth,
   createUserProfileDocument
 } from './../../firebaseConfig/firebase.utils';
-import FormInput from '../UI/form-input/FormInput';
-import CustomButton from '../UI/CustomButton/CustomButton';
-
 class SignUp extends Component {
   constructor() {
     super();

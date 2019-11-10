@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-
 import styles from './SignIn.module.scss';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+//components import
 import FormInput from '../UI/form-input/FormInput';
 import CustomButton from '../UI/CustomButton/CustomButton';
-import { withRouter } from 'react-router-dom';
+//firebase import
 import { signInWithGoogle, auth } from './../../firebaseConfig/firebase.utils';
 class SignIn extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: '',
       password: ''
@@ -73,5 +74,9 @@ class SignIn extends Component {
     );
   }
 }
+
+SignIn.propTypes = {
+  history: PropTypes.object.isRequired
+};
 
 export default withRouter(SignIn);

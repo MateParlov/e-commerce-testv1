@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './HeaderLogo.module.scss';
+import { Link } from 'react-router-dom';
+//icon import
 import LeafLogo from './../../../assets/logo/leafLogo.png';
-const HeaderLogo = props => {
+const HeaderLogo = () => {
   return (
     <Link to="/" className={styles.logoContainer}>
-      <img src={LeafLogo} className={styles.logo} />
+      <img src={LeafLogo} className={styles.logo} alt="company logo" />
     </Link>
   );
 };

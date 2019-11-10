@@ -1,7 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
+//components imports
 import PreviewCollection from './PreviewCollection/PreviewCollection';
+//redux imports
+import { connect } from 'react-redux';
 import { selectShopCollections } from '../../redux/shop/shop.selectors';
 
 const CollectionsOverview = props => {
@@ -22,6 +24,11 @@ const CollectionsOverview = props => {
   }
 
   return <React.Fragment>{collection}</React.Fragment>;
+};
+
+CollectionsOverview.propTypes = {
+  collections: PropTypes.array.isRequired,
+  category: PropTypes.string
 };
 
 const mapStateToProps = state => {

@@ -1,13 +1,14 @@
 import React from 'react';
-
 import styles from './Checkout.module.scss';
-
+import PropTypes from 'prop-types';
+//component imports
+import CheckoutItem from '../../components/checkoutItem/CheckoutItem';
+//redux imports
 import { connect } from 'react-redux';
 import {
   selectCartItems,
   selectCartItemsTotal
 } from './../../redux/cart/cart.selectors';
-import CheckoutItem from '../../components/checkoutItem/CheckoutItem';
 
 const Checkout = props => {
   const { cartItems, cartTotalPrice } = props;
@@ -20,6 +21,11 @@ const Checkout = props => {
       <div>Total Price: {cartTotalPrice}</div>
     </div>
   );
+};
+
+Checkout.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+  cartTotalPrice: PropTypes.number.isRequired
 };
 
 const mapStateToProps = state => {

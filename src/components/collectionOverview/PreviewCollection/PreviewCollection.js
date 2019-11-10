@@ -1,6 +1,7 @@
 import React from 'react';
-
 import styles from './PreviewCollection.module.scss';
+import PropTypes from 'prop-types';
+//components imports
 import CollectionItem from '../CollectionItem/CollectionItem';
 
 const PreviewCollection = props => {
@@ -16,6 +17,12 @@ const PreviewCollection = props => {
       </div>
     </div>
   );
+};
+
+PreviewCollection.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+  show: PropTypes.number.isRequired
 };
 
 export default PreviewCollection;

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
+import PropTypes from 'prop-types';
 import { auth } from './../../../firebaseConfig/firebase.utils';
 import CartIcon from '../../cart/cartIcon/CartIcon';
 
-const Navbar = props => {
+const Navbar = ({ currentUser }) => {
   const handleSignOut = () => {
     auth.signOut();
   };
@@ -17,7 +18,7 @@ const Navbar = props => {
       <Link className={styles.option} to="/shop">
         CONTACT
       </Link>
-      {props.currentUser ? (
+      {currentUser ? (
         <span className={styles.option} onClick={handleSignOut}>
           SIGN OUT
         </span>
@@ -29,6 +30,10 @@ const Navbar = props => {
       <CartIcon />
     </div>
   );
+};
+
+Navbar.propTypes = {
+  currentUser: PropTypes.object
 };
 
 export default Navbar;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Homepage.module.scss';
+//components imports
 import Directory from '../../components/directory/Directory';
 import HeroSection from '../../components/heroSection/HeroSection';
 const Homepage = () => {
