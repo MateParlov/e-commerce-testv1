@@ -15,7 +15,7 @@ const Navbar = ({ currentUser }) => {
       <Link className={styles.option} to="/shop">
         SHOP
       </Link>
-      <Link className={styles.option} to="/shop">
+      <Link className={styles.option} to="/contact">
         CONTACT
       </Link>
       {currentUser ? (

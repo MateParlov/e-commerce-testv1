@@ -16,6 +16,7 @@ import {
   auth,
   createUserProfileDocument
 } from './firebaseConfig/firebase.utils';
+import Contact from './pages/contact/Contact';
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -56,6 +57,7 @@ class App extends Component {
             this.props.currentUser ? <Redirect to="/" /> : <SignInSignOut />
           }
         />
+        <Route exact path="/contact" component={Contact} />
         <Route path="/checkout" component={Checkout} />
       </div>
     );

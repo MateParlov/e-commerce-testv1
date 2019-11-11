@@ -1,0 +1,19 @@
+.CheckoutPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+
+  .title {
+    font-size: 2em;
+  }
+  .separateLine {
+    width: 70%;
+    margin: 10px 0;
+    height: 3px;
+    background: gray;
+  }
+  .price {
+    font-size: 1.5em;
+  }
+}

@@ -3,12 +3,14 @@ import styles from './Checkout.module.scss';
 import PropTypes from 'prop-types';
 //component imports
 import CheckoutItem from '../../components/checkoutItem/CheckoutItem';
+import emptyCart from './../../assets/emptyCart.png';
 //redux imports
 import { connect } from 'react-redux';
 import {
   selectCartItems,
   selectCartItemsTotal
 } from './../../redux/cart/cart.selectors';
+import CheckoutPrice from '../../components/checkoutPrice/CheckoutPrice';
 
 const Checkout = props => {
   const { cartItems, cartTotalPrice } = props;
@@ -17,8 +19,14 @@ const Checkout = props => {
   });
   return (
     <div className={styles.Checkout}>
-      <div className={styles.checkoutItemsBox}>{renderCartItems}</div>
-      <div>Total Price: {cartTotalPrice}</div>
+      {cartTotalPrice === 0 ? (
+        <img className={styles.emptyCart} src={emptyCart} alt="empty cart" />
+      ) : (
+        <React.Fragment>
+          <div className={styles.checkoutItemsBox}>{renderCartItems}</div>
+          <CheckoutPrice totalPrice={cartTotalPrice} />
+        </React.Fragment>
+      )}
     </div>
   );
 };

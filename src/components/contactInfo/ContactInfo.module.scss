@@ -1,0 +1,12 @@
+.ContactInfo {
+  width: 500px;
+  display: flex;
+
+  .map {
+    width: 50%;
+    padding: 10px;
+    iframe {
+      border: none;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 const DISPLAY_ITEMS = [
   {
     id: 1,
-    title: 'A new level of comfort',
+    title: 'A new level of comfort never seen before',
     description:
       'Introducing the Adiddas Phantom Vision. Specialy design to offer maximum comfort.',
     imageUrl: 'https://i.imgur.com/zEFJrf0.png',
