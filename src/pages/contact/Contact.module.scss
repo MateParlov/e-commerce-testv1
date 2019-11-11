@@ -4,8 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  .title {
+    margin-bottom: 15px;
+  }
   .info {
     text-align: center;
+    margin-bottom: 30px;
     .subtitle {
       text-align: justify;
       width: 500px;
@@ -15,6 +20,12 @@
   .mapAndFormBox {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .mapAndFormBox {
+    flex-direction: column;
   }
 }

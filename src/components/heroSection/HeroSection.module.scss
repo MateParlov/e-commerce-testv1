@@ -27,3 +27,13 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .HeroSection {
+    flex-direction: column;
+    .leftArrow,
+    .rightArrow {
+      width: 60px;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 //components imports

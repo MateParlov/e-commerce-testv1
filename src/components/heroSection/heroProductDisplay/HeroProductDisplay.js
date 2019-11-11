@@ -13,7 +13,7 @@ const HeroProductDisplay = props => {
   };
 
   return (
-    <React.Fragment>
+    <div className={styles.HeroProductDisplay}>
       <div className={styles.contentSection}>
         <div>
           <h1 className={styles.title}>{title}</h1>
@@ -36,7 +36,7 @@ const HeroProductDisplay = props => {
           className={styles.heroImage}
         ></div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

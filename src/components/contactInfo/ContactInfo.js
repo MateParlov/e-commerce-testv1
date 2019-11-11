@@ -3,7 +3,7 @@ import styles from './ContactInfo.module.scss';
 const ContactInfo = props => {
   return (
     <div className={styles.ContactInfo}>
-      <ul>
+      <ul className={styles.info}>
         <li>Telefon: 01/555-001</li>
         <li>Adress: Ulica Antuna Bauera 2,Zagreb</li>
         <li>Email: leafShop@leafShop.hr</li>
