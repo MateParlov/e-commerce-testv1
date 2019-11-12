@@ -1,16 +1,16 @@
-import React from 'react';
-import styles from './CartIcon.module.scss';
-import PropTypes from 'prop-types';
+import React from "react";
+import styles from "./CartIcon.module.scss";
+import PropTypes from "prop-types";
 //components imports
-import CartDropDown from '../cartDropdown/CartDropDown';
-import { ReactComponent as ShoppingIcon } from './../../../assets/shoppingBag.svg';
+import CartDropDown from "../cartDropdown/CartDropDown";
+import { ReactComponent as ShoppingIcon } from "./../../../assets/shoppingBag.svg";
 //redux imports
-import { connect } from 'react-redux';
-import { switchHiddenState } from './../../../redux/cart/cart.actions';
+import { connect } from "react-redux";
+import { switchHiddenState } from "./../../../redux/cart/cart.actions";
 import {
   cartShow,
   selectCartItemsCount
-} from '../../../redux/cart/cart.selectors';
+} from "../../../redux/cart/cart.selectors";
 
 const CartIcon = props => {
   const { cartItemsCount, cartHidden } = props;
@@ -48,7 +48,4 @@ const mapDispatchToProps = dispatch => ({
   switchHiddenState: () => dispatch(switchHiddenState())
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CartIcon);
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

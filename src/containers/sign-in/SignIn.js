@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import styles from './SignIn.module.scss';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import styles from "./SignIn.module.scss";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 //components import
-import FormInput from '../UI/form-input/FormInput';
-import CustomButton from '../UI/CustomButton/CustomButton';
+import FormInput from "../../components/UI/form-input/FormInput";
+import CustomButton from "../../components/UI/CustomButton/CustomButton";
 //firebase import
-import { signInWithGoogle, auth } from './../../firebaseConfig/firebase.utils';
+import { signInWithGoogle, auth } from "../../firebaseConfig/firebase.utils";
 class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: ''
+      email: "",
+      password: ""
     };
   }
 
@@ -22,8 +22,8 @@ class SignIn extends Component {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      this.setState({ email: '', password: '' });
-      this.props.history.push('/');
+      this.setState({ email: "", password: "" });
+      this.props.history.push("/");
     } catch (err) {
       console.log(err);
     }

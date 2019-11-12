@@ -16,4 +16,16 @@
   .price {
     font-size: 1.5em;
   }
+  .stripeBox {
+    margin: 20px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .stripeInfo {
+    font-size: 0.9em;
+    color: red;
+    font-weight: normal;
+  }
 }

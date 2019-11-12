@@ -6,8 +6,12 @@
   .imgBox {
     width: 40%;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       height: 100%;
+      width: 150px;
     }
   }
 

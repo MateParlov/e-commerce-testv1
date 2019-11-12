@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import styles from './SignUp.module.scss';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import styles from "./SignUp.module.scss";
+import { withRouter } from "react-router-dom";
 //components imports
-import FormInput from '../UI/form-input/FormInput';
-import CustomButton from '../UI/CustomButton/CustomButton';
+import FormInput from "../../components/UI/form-input/FormInput";
+import CustomButton from "../../components/UI/CustomButton/CustomButton";
 //firebase imports
 import {
   auth,
   createUserProfileDocument
-} from './../../firebaseConfig/firebase.utils';
+} from "./../../firebaseConfig/firebase.utils";
 class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-      displayName: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-      errorMsg: ''
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      errorMsg: ""
     };
   }
 
@@ -34,9 +34,9 @@ class SignUp extends Component {
     const { displayName, email, password, confirmPassword } = this.state;
     if (password !== confirmPassword) {
       this.setState({
-        errorMsg: 'Passwords dont match',
-        password: '',
-        confirmPassword: ''
+        errorMsg: "Passwords dont match",
+        password: "",
+        confirmPassword: ""
       });
     }
 
@@ -49,12 +49,12 @@ class SignUp extends Component {
       await createUserProfileDocument(user, { displayName });
 
       this.setState({
-        displayName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
       });
-      this.props.history.push('/');
+      this.props.history.push("/");
     } catch (error) {
       console.log(error);
     }
