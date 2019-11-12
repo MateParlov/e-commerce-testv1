@@ -38,7 +38,7 @@ class SignIn extends Component {
   render() {
     return (
       <div className={styles.SignIn}>
-        <h2 className={styles.title}>I alredy hvae an account</h2>
+        <h2 className={styles.title}>I alredy have an account</h2>
         <span className={styles.subtitle}>
           Sign in with your email and password
         </span>

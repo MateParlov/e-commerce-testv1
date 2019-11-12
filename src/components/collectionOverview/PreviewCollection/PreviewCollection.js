@@ -1,13 +1,12 @@
-import React from 'react';
-import styles from './PreviewCollection.module.scss';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styles from "./PreviewCollection.module.scss";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 //components imports
-import CollectionItem from '../CollectionItem/CollectionItem';
+import CollectionItem from "../CollectionItem/CollectionItem";
 
 const PreviewCollection = props => {
   const { title, items, show, routeName } = props;
-  console.log(props);
   return (
     <div className={styles.PreviewCollection}>
       <Link to={`/shop/${routeName}`} className={styles.title}>

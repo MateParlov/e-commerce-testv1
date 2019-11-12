@@ -1,16 +1,8 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import config from "./firebase.config";
 
-const config = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
-  authDomain: 'ecommercesite-29055.firebaseapp.com',
-  databaseURL: 'https://ecommercesite-29055.firebaseio.com',
-  projectId: 'ecommercesite-29055',
-  storageBucket: 'ecommercesite-29055.appspot.com',
-  messagingSenderId: '185745907569',
-  appId: '1:185745907569:web:e432579c5af64ec1dde0d0'
-};
 firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -30,7 +22,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         ...additionalData
       });
     } catch (error) {
-      console.log('error creating user', error.message);
+      console.log("error creating user", error.message);
     }
   }
 
@@ -41,7 +33,7 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: 'select_account' });
+provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
