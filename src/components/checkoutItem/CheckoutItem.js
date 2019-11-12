@@ -1,23 +1,22 @@
-import React from 'react';
-import styles from './CheckoutItem.module.scss';
-import PropTypes from 'prop-types';
+import React from "react";
+import styles from "./CheckoutItem.module.scss";
+import PropTypes from "prop-types";
 //icon and components imports
-import CustomButton from '../../components/UI/CustomButton/CustomButton';
-import leftArrow from './../../assets/arrowIcons/left-arrow.png';
-import rightArrow from './../../assets/arrowIcons/right-arrow.png';
+import CustomButton from "../../components/UI/CustomButton/CustomButton";
+import leftArrow from "./../../assets/arrowIcons/left-arrow.png";
+import rightArrow from "./../../assets/arrowIcons/right-arrow.png";
 //redux imports
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import {
   deleteItem,
   removeItem,
   addItem
-} from './../../redux/cart/cart.actions';
+} from "./../../redux/cart/cart.actions";
 
 const CheckoutItem = props => {
   const { quantity, imageUrl, name, price, id } = props.item;
 
   const handleDeleteItem = () => {
-    console.log(id);
     props.deleteItem(id);
   };
   const handleRemoveItem = () => {
@@ -44,7 +43,7 @@ const CheckoutItem = props => {
             onClick={handleRemoveItem}
             className={styles.arrow}
             alt="remove item"
-          />{' '}
+          />{" "}
           {quantity}
           <img
             src={rightArrow}
@@ -87,7 +86,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(CheckoutItem);
+export default connect(null, mapDispatchToProps)(CheckoutItem);
